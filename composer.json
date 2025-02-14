@@ -1,0 +1,28 @@
+{
+    "name": "smit-backend/local-model-inference-bridge",
+    "description": "Asynchronous high-concurrency client bridge dispatching prompts to local Ollama, llama.cpp, and vLLM clusters with cloud failovers.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smit-backend",
+            "email": "sync2sale@gmail.com",
+            "homepage": "https://github.com/smit-backend"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmitBackend\\LocalLLMBridge\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmitBackend\\LocalLLMBridge\\PackageServiceProvider"
+            ]
+        }
+    }
+}
